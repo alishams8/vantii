@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./gateway:/app
+      - ./docker-compose.yml:/app/docker-compose.yml
+    networks:
+      - analyzer-network
+    user: ${DOCKER_UID}:${DOCKER_GID}
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    expose:
+      - "8000"
+    volumes:
+      - ./backend:/app
+      - ./src:/app/src
+    networks:
+      - analyzer-network
+    environment:
+      - PYTHONPATH=/app
+      - FRONTEND_SRC_PATH=/app/src
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - gateway
+    user: ${DOCKER_UID}:${DOCKER_GID}
+networks:
+  analyzer-network:
+    driver: bridge

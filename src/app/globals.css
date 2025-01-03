@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --copilot-sidebar-header-background: #4ade80 !important;
+    --copilot-sidebar-header-color: black !important;
+    --copilot-text-primary: #4ade80 !important;
+    --copilot-text-secondary: rgba(74, 222, 128, 0.7) !important;
+    --copilot-border-color: rgba(74, 222, 128, 0.2) !important;
+    --copilot-button-background: rgba(74, 222, 128, 0.1) !important;
+    --copilot-button-background-hover: rgba(74, 222, 128, 0.2) !important;
+    --copilot-button-border: rgba(74, 222, 128, 0.2) !important;
+    --copilot-button-border-hover: rgba(74, 222, 128, 0.3) !important;
+  }
+} 
+
+/* Force override for the header specifically */
+.copilot-sidebar-header {
+  background: #4ade80 !important;
+  color: black !important;
+} 
+
+/* Add these styles to override the default table text colors */
+.table th,
+.table td,
+.table input,
+.table div {
+  color: rgb(17 24 39) !important; /* text-gray-900 */
+} 
+
+/* Override any green text colors in the spreadsheet */
+.spreadsheet-container input,
+.spreadsheet-container td,
+.spreadsheet-container th {
+  color: #000000 !important;
+}
+
+/* Style the buttons consistently */
+.spreadsheet-container button {
+  background-color: #1f2937 !important; /* gray-800 */
+  color: white !important;
+}
+
+.spreadsheet-container button:hover {
+  background-color: #374151 !important; /* gray-700 */
+}
+
+/* Add these styles to force black text in spreadsheet */
+.spreadsheet-container input,
+.spreadsheet-container td,
+.spreadsheet-container th,
+.spreadsheet-container div {
+  color: rgb(17 24 39) !important; /* text-gray-900 */
+}
+
+/* Ensure input text is also black */
+.spreadsheet-container input::placeholder {
+  color: rgb(107 114 128); /* text-gray-500 */
+}
+
+/* Force black text in spreadsheet */
+table input,
+table th,
+table td {
+  color: #111827 !important;
+  background-color: white !important;
+}
+
+/* Override any other text colors in the spreadsheet */
+[data-spreadsheet] * {
+  color: #111827 !important;
+}
+
+/* Ensure input text stays black */
+table input::placeholder {
+  color: #6B7280 !important;
+}
+
+/* Add this to your globals.css to override any global styles */
+.spreadsheet-buttons button {
+  color: black !important;
+}
+
+/* Add this to override any existing color styles */
+.spreadsheet-title {
+  color: black !important;
+}

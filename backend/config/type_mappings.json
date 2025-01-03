@@ -1,0 +1,25 @@
+{
+  "typeScriptMappings": {
+    "string": "string",
+    "text": "string",
+    "number": "number",
+    "numeric": "number",
+    "boolean": "boolean",
+    "array": "any[]",
+    "object": "any",
+    "date": "Date",
+    "datetime": "Date",
+    "timestamp": "Date",
+    "integer": "number",
+    "float": "number",
+    "decimal": "number",
+    "json": "any",
+    "map": "Record<string, any>",
+    "list": "any[]",
+    "set": "Set<any>",
+    "binary": "Buffer",
+    "null": "null",
+    "undefined": "undefined",
+    "any": "any"
+  }
+} 

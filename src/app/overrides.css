@@ -1,0 +1,56 @@
+/* Target the specific copilot header class */
+.copilot-sidebar-header,
+.copilot-sidebar > div:first-child,
+div[class*="Header_header"],
+div[class*="Header_container"],
+[class*="copilot"] header,
+[class*="copilot"] [class*="header"],
+[class*="Sidebar_header"],
+[class*="sidebar-header"],
+[class*="Header_root"],
+[class*="Header_wrapper"] {
+  background: rgb(17, 24, 39) !important;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.1) !important;
+}
+
+/* Target all elements inside the header */
+.copilot-sidebar-header *,
+div[class*="Header_header"] *,
+[class*="copilot"] header *,
+[class*="Sidebar_header"] * {
+  color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Override any inline styles */
+[style*="background-color"],
+[style*="background"] {
+  background-color: rgb(17, 24, 39) !important;
+  background: rgb(17, 24, 39) !important;
+}
+
+[style*="color"] {
+  color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Force dark theme on all copilot elements */
+[class*="copilot"],
+[class*="Sidebar"],
+[class*="Header"] {
+  --header-background: rgb(17, 24, 39) !important;
+  --header-color: rgba(74, 222, 128, 0.7) !important;
+  --header-border: rgba(74, 222, 128, 0.2) !important;
+  --copilot-header-bg: rgb(17, 24, 39) !important;
+  --copilot-header-color: rgba(74, 222, 128, 0.7) !important;
+  --copilot-primary: rgba(74, 222, 128, 0.7) !important;
+  --copilot-secondary: rgba(74, 222, 128, 0.5) !important;
+  --text-color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Override message styles */
+[class*="message"],
+[class*="content"] {
+  color: rgba(74, 222, 128, 0.7) !important;
+} 

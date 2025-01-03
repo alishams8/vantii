@@ -1,0 +1,172 @@
+/* Target the specific copilot header class */
+.copilot-sidebar-header,
+.copilot-sidebar > div:first-child,
+div[class*="Header_header"],
+div[class*="Header_container"],
+[class*="copilot"] header,
+[class*="copilot"] [class*="header"],
+[class*="Sidebar_header"],
+[class*="sidebar-header"],
+[class*="Header_root"],
+[class*="Header_wrapper"] {
+  background: rgb(17, 24, 39) !important;
+  border-bottom: 1px solid rgba(74, 222, 128, 0.2) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.1) !important;
+}
+
+/* Target the bot icon in header */
+.copilot-sidebar-header svg:first-child,
+[class*="Header_header"] svg:first-child,
+[class*="copilot"] header svg:first-child,
+[class*="Sidebar_header"] svg:first-child {
+  color: rgba(74, 222, 128, 0.7) !important;
+  fill: rgba(74, 222, 128, 0.7) !important;
+  filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.4)) !important;
+}
+
+/* Override the header title specifically */
+.copilot-sidebar-header h3,
+[class*="Header_header"] h3,
+[class*="copilot"] header h3,
+[class*="copilot"] [class*="title"],
+[class*="Sidebar_header"] h3,
+[class*="Header_title"],
+[class*="sidebar-title"],
+div[class*="Header_header"] h3 {
+  color: rgba(74, 222, 128, 0.7) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  text-shadow: none !important;
+}
+
+/* Add animated gradient background */
+[class*="copilot-sidebar"],
+[class*="Sidebar_container"],
+div[class*="copilot"] {
+  background: rgb(17, 24, 39) !important;
+  border-left: 1px solid rgba(74, 222, 128, 0.2) !important;
+}
+
+/* Style the messages */
+[class*="copilot-message"],
+[class*="Message_container"],
+[class*="message-container"],
+[class*="message-content"],
+[class*="message-text"],
+.message,
+.message-text {
+  background: rgba(74, 222, 128, 0.05) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(74, 222, 128, 0.2) !important;
+  border-radius: 1rem !important;
+  color: rgba(74, 222, 128, 0.7) !important;
+  position: relative !important;
+  padding-left: 40px !important;
+}
+
+/* Add bot icon to system messages */
+[class*="copilot-message"]::before,
+[class*="Message_container"]::before,
+[class*="message-container"]::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 24px !important;
+  height: 24px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(74, 222, 128, 0.7)'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  opacity: 0.7 !important;
+}
+
+/* Style all text content */
+[class*="copilot"] *,
+[class*="message"] *,
+[class*="content"] * {
+  color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Style the input area */
+[class*="copilot-input"],
+[class*="Input_container"] input,
+[class*="copilot"] textarea,
+[class*="input-container"],
+[class*="message-input"] {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(74, 222, 128, 0.2) !important;
+  border-radius: 0.75rem !important;
+  color: rgba(74, 222, 128, 0.7) !important;
+  width: calc(100% - 20px) !important;
+  margin: 0 10px !important;
+  padding: 12px 16px !important;
+  height: 48px !important;
+  font-size: 14px !important;
+}
+
+[class*="copilot-input"]::placeholder,
+[class*="Input_container"] input::placeholder,
+[class*="copilot"] textarea::placeholder {
+  color: rgba(74, 222, 128, 0.3) !important;
+}
+
+[class*="copilot-input"]:focus,
+[class*="Input_container"] input:focus,
+[class*="copilot"] textarea:focus {
+  outline: none !important;
+  border-color: rgba(74, 222, 128, 0.4) !important;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2) !important;
+}
+
+/* Style the input container */
+[class*="input-container"],
+[class*="message-input-container"],
+[class*="copilot"] form {
+  display: flex !important;
+  align-items: center !important;
+  padding: 8px !important;
+  width: 100% !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+  border-top: 1px solid rgba(74, 222, 128, 0.1) !important;
+}
+
+/* Style the buttons container */
+[class*="button-container"],
+[class*="actions"] {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: auto !important;
+}
+
+/* Add !important to all color-related properties */
+[class*="copilot"],
+[class*="Sidebar"],
+[class*="Header"] {
+  --header-background: rgb(17, 24, 39) !important;
+  --header-color: rgba(74, 222, 128, 0.7) !important;
+  --header-border: rgba(74, 222, 128, 0.2) !important;
+  --copilot-header-bg: rgb(17, 24, 39) !important;
+  --copilot-header-color: rgba(74, 222, 128, 0.7) !important;
+  --copilot-primary: rgba(74, 222, 128, 0.7) !important;
+  --copilot-secondary: rgba(74, 222, 128, 0.5) !important;
+  --text-color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Force any element with style attribute */
+[style*="background"],
+[style*="color"] {
+  background-color: transparent !important;
+  color: rgba(74, 222, 128, 0.7) !important;
+}
+
+/* Target any element with 'header' in its class name */
+[class*="header"] {
+  background-color: rgb(17, 24, 39) !important;
+  background: rgb(17, 24, 39) !important;
+} 
